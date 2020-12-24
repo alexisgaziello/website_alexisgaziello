@@ -10,7 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/extra.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-preload">
 
@@ -70,34 +72,56 @@
 
 						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+								<div id="contact-form-all">
+									<h2 class="major">Contact</h2>
+									<form id="form-contact">
+										<!--  method="post" action="#"> -->
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input class="input-field" type="text" name="name" id="name"/>
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input class="input-field" type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea class="input-field" name="message" id="message" rows="5"></textarea>
+											</div>
 										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<ul class="actions">
+											<li><input onclick="sendRequest();" type="button" value="Send Message" class="primary" /></li>
+											<!-- <li><input type="reset" value="Reset" /></li> -->
+										</ul>
+									</form>
+									<ul class="icons">
+										<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+										<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+										<li><a href="https://www.linkedin.com/in/alexisgaziello/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/alexisgaziello" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="mailto:alexis.gaziello@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+										<li><a href="https://www.instagram.com/alexisgaziello/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
+								</div>
+								<div class="loader" style="display:none" id="contact-loading-spinner"></div>
+
+								<div style="display:none" id="contact-success">
+								  <h2 class="w3-large">Success</h3>
+								  <p class="w3-large">Thank you! Your request was successfully made. We will answer you by email as soon as possible.</p>
+								</div>
+							  
+								<div style="display:none" id="contact-failure">
+								  <h2 class="w3-large">Failure</h3>
+								  <p class="w3-large">Some unexpected error occured with my server. I am sorry.</p>
+								  <p>Please send me an email to <a onclick="sendEmail();">alexis.gaziello@gmail.com</a> with your information and let me know that you had some issues with the website.</p>
+								  <ul class="actions">
+									<li><input onclick="sendEmail();" type="button" value="Send Email" class="primary" /></li>
+									<!-- <li><input type="reset" value="Reset" /></li> -->
+								  </ul>
+								</div>
 							</article>
+							
 
 						<!-- Elements -->
 							<article id="elements">
@@ -157,10 +181,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</ol>
 									<h4>Icons</h4>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+										<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+										<li><a href="https://www.linkedin.com/in/alexisgaziello/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/alexisgaziello" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="mailto:alexis.gaziello@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+										<li><a href="https://www.instagram.com/alexisgaziello/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									</ul>
 
 									<h4>Actions</h4>
@@ -359,6 +385,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/form.submit.js"></script>
 
 	</body>
 </html>
