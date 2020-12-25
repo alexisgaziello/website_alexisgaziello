@@ -710,15 +710,18 @@ input, select, textarea {
 			width: 50%;
 			border-radius: 50%;
 			margin-left: auto;
-				margin-right: auto;
+			margin-right: auto;
 			border-radius: 50%;
 		}
 
 			.image.intro img {
-				width: 30%;
+				width: 20%;
 				border-radius: 50%;
 				margin-left: auto;
-				margin-right: auto;
+				/*margin-right: auto;*/
+				margin-right: 15%;
+				margin-top: -18%;
+				margin-bottom: 4%;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -1378,11 +1381,12 @@ input, select, textarea {
 					min-width: 7.5rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
+					padding: 0 0 0 0;
 					text-transform: uppercase;
 					letter-spacing: 0.2rem;
 					font-size: 0.8rem;
 					border-bottom: 0;
+					width:17vw;
 				}
 
 					#header nav ul li a:hover {

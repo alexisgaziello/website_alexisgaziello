@@ -11,7 +11,17 @@
 	margin-bottom: 100px;
   }
 
-  @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+.notbold{
+    font-weight:normal
+}​
+
+.img-education{
+	max-width:30px;
+	max-height: 50px;
+	margin-bottom: 5px;
+}

@@ -79,7 +79,7 @@
     };
 })(jQuery);
 
-window.onload = function() {
+document.onload = function() {
     $("#message").autogrow();
 }
 
